@@ -26,7 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+# SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-$dgn&bbgk=d0pxf#6)yq(zbar)t0l#=*dudu_!gu1=4p^jd6y9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -94,9 +95,11 @@ DATABASES = {
         
         'NAME': 'attendance_manager',
         'USER': 'postgres',
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT')
+        'PASSWORD': 'root',
+        # 'HOST': config('DB_HOST'),
+        'HOST': 'localhost',
+        # 'PORT': config('DB_PORT'),
+        'PORT': '5432'
     }
 }
 
